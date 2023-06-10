@@ -3,7 +3,7 @@ __pycache__/
 *.py[cod]
 
 # virturalenv
-myenv/
+venv/
 
 # C extensions
 *.so
