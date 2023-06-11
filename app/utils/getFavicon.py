@@ -10,9 +10,8 @@ def getFavicon(url):
     if icon_link:
         favicon = icon_link['href']
         if favicon.startswith('http'):  # absolute URL
-            print(favicon)
             return favicon
         else:  # relative URL
             return requests.compat.urljoin(url, favicon)
     else:
-        return None
+        return 'https://www.google.com/s2/favicons?domain_url=' + url

@@ -1,0 +1,6 @@
+CREATE TABLE bookmarks (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    url VARCHAR(255) NOT NULL,
+    name VARCHAR(255) NOT NULL,
+    favicon_url VARCHAR(255) NOT NULL
+);
