@@ -12,7 +12,7 @@ def init_app():
     url_model = api.model('URL', {'url': fields.String(
         required=True, description='The URL to fetch the favicon from.')})
 
-    @api.route('/api/favicon')
+    @api.route('/favicon')
     class FaviconResource(Resource):
         @api.expect(url_model, validate=True)
         def post(self):
@@ -20,11 +20,11 @@ def init_app():
             favicon_url = getFavicon(url)
             return {'favicon_url': favicon_url}
 
-    @app.route('/api/')
+    @app.route('/')
     def Hello():
         return 'Hello World!'
 
-    @app.route('/api/health')
+    @app.route('/health')
     def health():
         return 'OK'
 
